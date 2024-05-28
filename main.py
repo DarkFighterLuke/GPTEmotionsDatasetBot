@@ -35,7 +35,7 @@ def load_text_file_lines(file_path):
 
 @bot.message_handler(commands=["get"])
 def send_file(message):
-    temp_file = "temp.csv"
+    temp_file = "dataset.csv"
     if str(message.from_user.id) in load_text_file_lines(allowed_ids_file):
         logger.info(
             f"Authorized user {message.from_user.id}|{message.from_user.username}|{message.from_user.first_name} {message.from_user.last_name} sent /get command")
