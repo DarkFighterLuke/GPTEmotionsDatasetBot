@@ -21,7 +21,7 @@ def create_filtered_csv(input_file_path, output_file_path):
         writer = csv.writer(output_file, delimiter="|", lineterminator="\n")
         for row in reader:
             if not row[1] in load_text_file_lines(filtered_ids_file):
-                writer.writerow(row)
+                writer.writerow(row[5:])
 
 
 def load_text_file_lines(file_path):
